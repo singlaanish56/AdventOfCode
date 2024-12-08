@@ -6,6 +6,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 )
 func recur(v []int,k, index, last int, addconact bool) int{
 
@@ -60,6 +61,7 @@ func part1and2(m map[int][]int, useConcat bool){
 }
 
 func main(){
+	start:= time.Now()
 	if len(os.Args)<1 {
 		fmt.Println("Error while gettin the file")
 		return 
@@ -92,7 +94,13 @@ func main(){
 		m[key]=nums
 	}
 
-	//part1and2(m, false)
+	
+	part1and2(m, false)
+	end1:=time.Now()
 	part1and2(m, true)
+	end2:=time.Now()
+
+	fmt.Println("firt one took : ", end1.Sub(start))
+	fmt.Println("firt second took : ", end2.Sub(start))
 	//fmt.Println(m)
 }	
