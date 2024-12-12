@@ -153,7 +153,7 @@ func main(){
 	//fmt.Println(store)
 	start1 := time.Now()
 	part1(store)
-	end1 := time.Now()
+	end1 := time.Now() 
 
 	start2:=time.Now()
 	part2(store)
