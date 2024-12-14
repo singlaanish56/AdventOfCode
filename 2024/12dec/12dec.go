@@ -28,12 +28,12 @@ func calculatePerimiter(store [][]string, i,j,m,n int) int{
 func countCorners(store [][]string, i, j, m, n int) int {
     corners := 0
 
-    // All possible L-shaped pairs of directions
+ 
     LCorners := [][3][2]int{
-        {{-1, 0}, {0, -1}}, // Up-Left
-        {{-1, 0}, {0, 1}},  // Up-Right
-        {{1, 0}, {0, -1}},  // Down-Left
-        {{1, 0}, {0, 1}},   // Down-Right
+        {{-1, 0}, {0, -1}},
+        {{-1, 0}, {0, 1}}, 
+        {{1, 0}, {0, -1}},  
+        {{1, 0}, {0, 1}},  
     }
 
     for _, lShape := range LCorners {
@@ -49,12 +49,11 @@ func countCorners(store [][]string, i, j, m, n int) int {
         }
     }
 
-	//coutn diagnoals corner
 	DiaganalCorners := [][][2]int{
-		{{-1, -1}, {0, -1}, {-1, -0}}, // Up-Left
-        {{-1, 1}, {0, 1}, {-1, -0}},  // Up-Right
-        {{1, -1}, {0, -1}, {1, -0}},  // Down-Left
-        {{1, 1}, {0, 1}, {1, -0}},   // Down-Right
+		{{-1, -1}, {0, -1}, {-1, -0}}, 
+        {{-1, 1}, {0, 1}, {-1, -0}},  
+        {{1, -1}, {0, -1}, {1, -0}}, 
+        {{1, 1}, {0, 1}, {1, -0}},  
 	}
 
 	for _, corner := range DiaganalCorners{
